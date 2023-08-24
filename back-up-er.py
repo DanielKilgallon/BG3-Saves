@@ -6,7 +6,7 @@ import shutil
 save_dir = 'C:/Users/User/AppData/Local/Larian Studios/Baldur\'s Gate 3/PlayerProfiles/Public/Savegames/Story/'
 
 saves = []
-reg_compile = re.compile('Pet*')
+reg_compile = re.compile('Pet.*')
 for dirpath, dirnames, filenames in os.walk(save_dir):
     saves = saves + [dirname for dirname in dirnames if  reg_compile.match(dirname)]
 
