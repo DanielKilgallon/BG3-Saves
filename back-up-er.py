@@ -8,8 +8,7 @@ save_dir = 'C:/Users/User/AppData/Local/Larian Studios/Baldur\'s Gate 3/PlayerPr
 saves = []
 reg_compile = re.compile('Pet.*')
 for dirpath, dirnames, filenames in os.walk(save_dir):
-    saves = saves + [dirname for dirname in dirnames if  reg_compile.match(dirname)]
-
+    saves = saves + [dirname for dirname in dirnames if reg_compile.match(dirname)]
 
 for save in saves:
     save_path = save_dir + save
